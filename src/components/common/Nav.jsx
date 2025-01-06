@@ -6,17 +6,18 @@ import { FaArrowRightArrowLeft } from "react-icons/fa6";
 import { FaShoppingBag } from "react-icons/fa";
 import { FaStar } from "react-icons/fa6";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { IoReorderThreeOutline } from "react-icons/io5";
 import { useState } from "react";
 import { useCart } from "react-use-cart";
+import Data from "../pages/home/data/Data";
 import Login from "../login-sign/Login";
 import SignUp from "../login-sign/SignUp";
 
 const Nav = () => {
   const { totalUniqueItems, cartTotal } = useCart();
   const [activeModal, setActiveModal] = useState(null);
-
+  const navigate = useNavigate();
   const openLogin = () => setActiveModal("login");
   const openSignUp = () => setActiveModal("signup");
   const closeModal = () => setActiveModal(null);
@@ -24,6 +25,10 @@ const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+  const handleLinkClick = (path) => {
+    navigate(path);
+    window.scrollTo(0, 0);
   };
   return (
     <>
@@ -96,9 +101,13 @@ const Nav = () => {
                     <div className="flex flex-col gap-3">
                       <h2>SHOP PAGE</h2>
                       <div className="flex flex-col gap-3 text-gray-500 hover:cursor-pointer">
-                        <h3 className="hover:text-orange-500">My Cart</h3>
-                        <h3 className="hover:text-orange-500">My Checkout</h3>
-                        <h3 className="hover:text-orange-500">My Wishlist</h3>
+                        <Link to="/CartView">
+                          <h3 className="hover:text-orange-500">My Cart</h3>
+                        </Link>
+
+                        <Link to="/WishlistView">
+                          <h3 className="hover:text-orange-500">My Wishlist</h3>
+                        </Link>
                         <h3 className="hover:text-orange-500">My Account</h3>
                       </div>
                     </div>
@@ -123,66 +132,51 @@ const Nav = () => {
                       </div>
                     </div>
                     <div className="flex flex-col gap-3">
-                      <h2>BEST SELLERS</h2>
-                      <div>
-                        <div className="mb-5 flex gap-3">
-                          <img
-                            src="images/random/random3.jpg"
-                            className="w-[70px]"
-                          />
-                          <div>
-                            <h3 className="transition-all duration-300 hover:cursor-pointer hover:text-orange-500">
-                              Simple Product 003
-                            </h3>
-                            <div className="flex">
-                              <i className="star text-yellow-400">
-                                <FaStar />
-                              </i>
-                              <i className="star text-yellow-400">
-                                <FaStar />
-                              </i>
-                              <i className="star text-yellow-400">
-                                <FaStar />
-                              </i>
-                              <i className="star text-yellow-400">
-                                <FaStar />
-                              </i>
-                              <i className="star text-yellow-400">
-                                <FaStar />
-                              </i>
+                      <div className="flex place-content-center">
+                        <h2>BEST SELLERS</h2>
+                      </div>
+                      <div className="grid grid-cols-2 gap-2">
+                        {Data.BestSeller.map((books) => (
+                          <Link
+                            to={`/BookView/${books.id}`}
+                            key={books.id}
+                            onClick={() =>
+                              handleLinkClick(`/BookView/${books.id}`)
+                            }
+                          >
+                            <div className="mb-5 flex gap-3">
+                              <img src={books.img} className="w-[50px]" />
+                              <div>
+                                <h3 className="text-[12px] transition-all duration-300 hover:cursor-pointer hover:text-orange-500">
+                                  {books.product}
+                                </h3>
+                                <div className="flex text-[10px]">
+                                  <i className="star text-yellow-400">
+                                    <FaStar />
+                                  </i>
+                                  <i className="star text-yellow-400">
+                                    <FaStar />
+                                  </i>
+                                  <i className="star text-yellow-400">
+                                    <FaStar />
+                                  </i>
+                                  <i className="star text-yellow-400">
+                                    <FaStar />
+                                  </i>
+                                  <i className="star text-yellow-400">
+                                    <FaStar />
+                                  </i>
+                                </div>
+                                <h3 className="text-orange-500">
+                                  <span className="mr-2 text-gray-400">
+                                    <del>{books.discount}</del>
+                                  </span>
+                                  ${books.price}
+                                </h3>
+                              </div>
                             </div>
-                            <h3 className="text-orange-500">$340.00</h3>
-                          </div>
-                        </div>
-                        <div className="mb-5 flex gap-3">
-                          <img
-                            src="images/sale/sale2.jpg"
-                            className="w-[70px]"
-                          />
-                          <div>
-                            <h3 className="transition-all duration-300 hover:cursor-pointer hover:text-orange-500">
-                              Simple Product 003
-                            </h3>
-                            <div className="flex">
-                              <i className="star text-yellow-400">
-                                <FaStar />
-                              </i>
-                              <i className="star text-yellow-400">
-                                <FaStar />
-                              </i>
-                              <i className="star text-yellow-400">
-                                <FaStar />
-                              </i>
-                              <i className="star text-yellow-400">
-                                <FaStar />
-                              </i>
-                              <i className="star text-yellow-400">
-                                <FaStar />
-                              </i>
-                            </div>
-                            <h3 className="text-orange-500">$340.00</h3>
-                          </div>
-                        </div>
+                          </Link>
+                        ))}
                       </div>
                     </div>
                   </div>
