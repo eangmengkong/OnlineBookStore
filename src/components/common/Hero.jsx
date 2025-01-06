@@ -23,7 +23,7 @@ const Hero = () => {
       <div>
         <Search />
       </div>
-      <div className="container">
+      <div className="font-body container">
         <div className="wrapper mx-auto max-w-[1200px]">
           <div className="mt-7 flex justify-between px-8 py-5">
             <div className="w-[220px] items-center bg-gray-700 p-4 text-white maxmd:hidden">
@@ -31,17 +31,17 @@ const Hero = () => {
                 <i className="text-[30px]">
                   <IoReorderThreeOutline />
                 </i>
-                All CATEGORIES
+                ប្រភេទសៀវភៅ
               </h2>
               <hr />
 
               <h2 className="p-3 transition-all duration-300 hover:cursor-pointer hover:text-orange-500 hover:transition-all hover:duration-300">
-                Audiobooks
+                ផ្នត់គំនិតជាជីវកម្ម
               </h2>
               <hr />
               <div className="group relative flex items-center justify-between">
                 <h2 className="p-3 transition-all duration-300 hover:cursor-pointer hover:text-orange-500">
-                  Children`s Books
+                  អប់រំ និងកុមារ
                 </h2>
                 <i>
                   <FaCaretRight />
@@ -70,7 +70,7 @@ const Hero = () => {
               <hr />
               <div className="group relative flex items-center justify-between">
                 <h2 className="p-3 transition-all duration-300 hover:cursor-pointer hover:text-orange-500 hover:transition-all hover:duration-300">
-                  Bussiness & Money
+                  ចំណេះដឹងទូទៅ
                 </h2>
                 <i>
                   <FaCaretRight />
@@ -123,14 +123,16 @@ const Hero = () => {
                 {Hero_data.Slider.map((book) => (
                   <SwiperSlide key={book.id}>
                     <div
-                      className="relative h-[580px] bg-cover bg-center text-white maxmd:bg-[length:100%_100%] maxmd:bg-no-repeat"
-                      style={{ backgroundImage: `url(${book.img})` }}
+                      className="relative ml-[60px] h-[580px] bg-cover bg-[center_left_150px] text-white maxmd:bg-[length:100%_100%] maxmd:bg-[center_left_50px] maxmd:bg-no-repeat"
+                      style={{
+                        backgroundImage: `url(${book.img})`,
+                      }}
                     >
-                      <div className="absolute ml-[130px] mt-[200px] flex flex-col items-center justify-center text-center maxmd:left-[-130px] maxmd:w-[150px]">
+                      <div className="absolute ml-[130px] mt-[200px] flex flex-col items-center justify-center text-center text-gray-600 maxmd:left-[-130px] maxmd:w-[150px]">
                         <h1 className="text-[2rem] font-bold maxmd:text-[22px]">
                           {book.BookName}
                         </h1>
-                        <h4 className="text-2xl">
+                        <h4 className="flex gap-2 text-2xl">
                           {book.Discount}
                           <span>
                             <del>${book.Price.toFixed(2)}</del>

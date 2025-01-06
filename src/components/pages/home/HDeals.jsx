@@ -8,7 +8,7 @@ const HDeals = () => {
   };
   return (
     <>
-      <div className="container">
+      <div className="font-body container">
         <div className="wrapper mx-auto max-w-[1200px] p-5">
           <h2 className="text-xl font-bold">DEALS OF THE DAY</h2>
           <div className="flex justify-evenly gap-16 maxmd:grid maxmd:grid-cols-1">
@@ -35,8 +35,8 @@ const HDeals = () => {
 
             <div className="group flex items-center justify-center border-[3px] border-orange-400 px-10 py-16">
               <img
-                src="images/deals/deal1.jpg"
-                className="group-hover:animate-ball-bounce"
+                src="/images1/homepageimages/DealsDayimg/DD1.jpeg"
+                className="h-[350px] w-[250px] group-hover:animate-ball-bounce"
               />
             </div>
             <div className="grid grid-cols-2 gap-2">
@@ -47,7 +47,7 @@ const HDeals = () => {
                   onClick={() => handleLinkClick(`/BookView/${books.id}`)}
                 >
                   <div className="text-center">
-                    <img src={books.img} className="w-[150px]" />
+                    <img src={books.img} className="w-[250px]" />
                     <h3 className="text-orange-500">
                       <span className="mr-2 text-gray-400">
                         <del>{books.discount}</del>

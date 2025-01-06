@@ -2,19 +2,27 @@ const Hero_data = {
   Slider: [
     {
       id: 3,
-      img: "/images/book-slider.jpg",
-      BookName: "A Game of Thrones",
+      img: "/images1/homepageimages/HeroImg/slider1.png",
+      BookName: "ទុកផ្លូវក្រោយ​ ភាគ១",
       Discount: "-20%",
-      Price: 80.0,
-      "P-A-D": 66.0,
+      Price: 10,
+      "P-A-D": 8,
     },
     {
       id: 4,
-      img: "/images/book-slider1.jpg",
-      BookName: "Wake The Fuck Up",
+      img: "/images1/homepageimages/HeroImg/slider2.png",
+      BookName: "ទុកផ្លូវក្រោយ​ ភាគ2",
       Discount: "-20%",
-      Price: 80.0,
-      "P-A-D": 66.0,
+      Price: 10.0,
+      "P-A-D": 8,
+    },
+    {
+      id: 4,
+      img: "/images1/homepageimages/HeroImg/slider3.png",
+      BookName: "មនុស្សមានពិស",
+      Discount: "-20%",
+      Price: 10.0,
+      "P-A-D": 8,
     },
   ],
   children_book: [
@@ -107,25 +115,25 @@ const Hero_data = {
   ],
   Catagories: [
     {
-      genre: " Usedbooks",
+      genre: " អភិវឌ្ឍខ្លួន",
     },
     {
-      genre: "  Biographies",
+      genre: "  យុទ្ធសាស្ត្រ",
     },
     {
-      genre: "  Comics",
+      genre: "  កំណាព្យ",
     },
     {
-      genre: "  Education",
+      genre: "  ប្រវត្តិសាស្ត្រ",
     },
     {
-      genre: "   Engineering",
+      genre: "   សេដ្ឋកិច្ច និងនយោបាយ",
     },
     {
-      genre: "   Science & Technology",
+      genre: "   ភាពជាអ្នកដឹកនាំ",
     },
     {
-      genre: " More Categories",
+      genre: " មានច្រើនទៀត...",
     },
   ],
 };

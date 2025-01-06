@@ -48,7 +48,7 @@ const BookView = () => {
       <div>
         <Search />
       </div>
-      <div className="flex flex-col justify-between gap-16 lg:flex-row lg:items-center">
+      <div className="font-body flex flex-col justify-between gap-16 lg:flex-row lg:items-center">
         <div className="mb-12 flex flex-col items-center gap-6 p-6 lg:w-2/4">
           <img
             src={activeImg}
@@ -62,7 +62,7 @@ const BookView = () => {
                   key={index}
                   src={img}
                   alt={`book-${index}`}
-                  className="h-[150px] w-24 cursor-pointer rounded-md maxmd:w-20"
+                  className="h-[150px] w-28 cursor-pointer rounded-md maxmd:w-20"
                   onClick={() => setActiveImage(img)}
                 />
               ))}
@@ -74,7 +74,9 @@ const BookView = () => {
             <h1 className="text-3xl font-bold">{book.name}</h1>
             <h3 className="text-xl font-bold">{book.product}</h3>
           </div>
-          <p className="text-gray-700">{book.desc}</p>
+          <div className="w-[630px]">
+            <p className="text-gray-700">{book.desc}</p>
+          </div>
           <h6 className="text-2xl font-semibold">$ {book.price}</h6>
           <div className="flex flex-row items-center gap-3 maxmd:flex maxmd:flex-col">
             <button

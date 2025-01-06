@@ -28,7 +28,7 @@ const HBestSeller = ({ data }) => {
   };
   return (
     <>
-      <div className="container">
+      <div className="font-body container">
         <div className="wrapper mx-auto max-w-[1200px] p-5">
           <div className="flex flex-col items-center justify-center">
             <h1 className="text-4xl font-bold">BEST SELLER</h1>
@@ -40,13 +40,13 @@ const HBestSeller = ({ data }) => {
 
           <ul className="flex items-center justify-center gap-5 text-[20px] font-bold maxmd:gap-4 maxmd:text-[13px]">
             <li className="transition-all duration-300 ease-in-out hover:text-orange-600 hover:underline hover:duration-200 hover:ease-in-out">
-              CHILDREN`S BOOKS
+              អភិវឌ្ឍខ្លួន
             </li>
             <li className="transition-all duration-300 ease-in-out hover:text-orange-600 hover:underline hover:duration-200 hover:ease-in-out">
-              AUDIOBOOKS
+              ភាពជាអ្នកដឹកនាំ
             </li>
             <li className="transition-all duration-300 ease-in-out hover:text-orange-600 hover:underline hover:duration-200 hover:ease-in-out">
-              BUSINESSBOOKS
+              យុទ្ធសាស្ត
             </li>
           </ul>
 
@@ -66,7 +66,7 @@ const HBestSeller = ({ data }) => {
                       className="w-[230px]"
                     />
                   </Link>
-                  <div className="absolute bottom-[123px] left-0 right-0 flex h-[32px] items-center justify-center gap-4 bg-orange-500 p-1 text-[20px] text-black opacity-0 transition-opacity duration-300 group-hover:opacity-100 maxmd:bottom-[140px]">
+                  <div className="absolute bottom-[150px] left-0 right-0 flex h-[32px] items-center justify-center gap-4 bg-orange-500 p-1 text-[20px] text-black opacity-0 transition-opacity duration-300 group-hover:opacity-100 maxmd:bottom-[140px]">
                     <div
                       className="rounded-[50%] bg-black p-1 text-white hover:bg-white hover:text-orange-400"
                       onClick={() => handleAddToWishlist(books)}
@@ -85,7 +85,7 @@ const HBestSeller = ({ data }) => {
                       </div>
                     </Link>
                   </div>
-                  <div className="flex flex-col gap-2 py-3 text-center">
+                  <div className="mb-3 flex h-[100px] flex-col gap-2 py-3 text-center">
                     <h3 className="text-orange-500">
                       <span className="mr-2 text-gray-400">
                         <del>{books.discount}</del>
@@ -95,17 +95,17 @@ const HBestSeller = ({ data }) => {
                     <h2 className="transition-all duration-300 hover:cursor-pointer hover:text-orange-500 hover:transition-all hover:duration-300 maxmd:text-[14px]">
                       {books.product}
                     </h2>
-                    <div className="flex items-center justify-center">
-                      <button
-                        className="flex items-center gap-2 border-2 p-1 transition-all duration-300 hover:cursor-pointer hover:bg-orange-500 hover:text-white hover:transition-all hover:duration-300 maxmd:text-[15px]"
-                        onClick={() => addItem({ ...books, id: books.id })}
-                      >
-                        <i>
-                          <FiShoppingCart />
-                        </i>
-                        Add to cart
-                      </button>
-                    </div>
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <button
+                      className="flex items-center gap-2 border-2 p-1 transition-all duration-300 hover:cursor-pointer hover:bg-orange-500 hover:text-white hover:transition-all hover:duration-300 maxmd:text-[15px]"
+                      onClick={() => addItem({ ...books, id: books.id })}
+                    >
+                      <i>
+                        <FiShoppingCart />
+                      </i>
+                      Add to cart
+                    </button>
                   </div>
                 </div>
               ))}
@@ -118,7 +118,7 @@ const HBestSeller = ({ data }) => {
 
           <div className="wrapper flex justify-between maxmd:grid maxmd:grid-cols-2 maxmd:gap-5">
             <div className="mt-10">
-              <h2 className="mb-6 text-[20px] font-bold maxmd:text-[15px]">
+              <h2 className="mb-6 text-center text-[20px] font-bold maxmd:text-[15px]">
                 FEATURED PRODUCTS
               </h2>
               {Data.Featured.map((books) => (
@@ -128,7 +128,7 @@ const HBestSeller = ({ data }) => {
                   onClick={() => handleLinkClick(`/BookView/${books.id}`)}
                 >
                   <div className="mb-5 flex gap-3">
-                    <img src={books.img} className="w-[70px]" />
+                    <img src={books.img} className="w-[120px]" />
                     <div>
                       <h3 className="transition-all duration-300 hover:cursor-pointer hover:text-orange-500 hover:transition-all hover:duration-300">
                         {books.product}
@@ -165,7 +165,7 @@ const HBestSeller = ({ data }) => {
             {/* SALE PRODUCTS */}
 
             <div className="mt-10">
-              <h2 className="mb-6 text-[20px] font-bold maxmd:text-[15px]">
+              <h2 className="mb-6 text-center text-[20px] font-bold maxmd:text-[15px]">
                 SALE PRODUCTS
               </h2>
 
@@ -176,7 +176,7 @@ const HBestSeller = ({ data }) => {
                   onClick={() => handleLinkClick(`/BookView/${books.id}`)}
                 >
                   <div className="mb-5 flex gap-3">
-                    <img src={books.img} className="w-[70px]" />
+                    <img src={books.img} className="w-[120px]" />
                     <div>
                       <h3 className="transition-all duration-300 hover:cursor-pointer hover:text-orange-500 hover:transition-all hover:duration-300">
                         {books.product}
@@ -213,7 +213,7 @@ const HBestSeller = ({ data }) => {
             {/* RANDOM PRODUCTS */}
 
             <div className="mt-10">
-              <h2 className="mb-6 text-[20px] font-bold maxmd:text-[15px]">
+              <h2 className="mb-6 text-center text-[20px] font-bold maxmd:text-[15px]">
                 RANDOM PRODUCTS
               </h2>
               {Data.Random.map((books) => (
@@ -223,7 +223,7 @@ const HBestSeller = ({ data }) => {
                   onClick={() => handleLinkClick(`/BookView/${books.id}`)}
                 >
                   <div className="mb-5 flex gap-3">
-                    <img src={books.img} className="w-[70px]" />
+                    <img src={books.img} className="w-[120px]" />
                     <div>
                       <h3 className="transition-all duration-300 hover:cursor-pointer hover:text-orange-500 hover:transition-all hover:duration-300">
                         {books.product}
@@ -256,7 +256,10 @@ const HBestSeller = ({ data }) => {
                 </Link>
               ))}
             </div>
-            <img src="images/bestsell.jpg" className="mt-10 maxmd:h-[350px]" />
+            <img
+              src="/images1/homepageimages/BestSellerimg/BS15.jpg"
+              className="mt-10 maxmd:h-[350px]"
+            />
           </div>
         </div>
       </div>

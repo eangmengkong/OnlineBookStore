@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        body: ["Noto Sans Khmer", " serif"],
+      },
       animation: {
         "ball-bounce": "ball-bounce 0.6s infinite", // Faster bounce
       },
