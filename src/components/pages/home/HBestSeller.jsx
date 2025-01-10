@@ -28,7 +28,7 @@ const HBestSeller = ({ data }) => {
   };
   return (
     <>
-      <div className="font-body container">
+      <div className="container font-body md:max-w-[830px] lg:max-w-[1600px]">
         <div className="wrapper mx-auto max-w-[1200px] p-5">
           <div className="flex flex-col items-center justify-center">
             <h1 className="text-4xl font-bold">BEST SELLER</h1>
@@ -53,7 +53,7 @@ const HBestSeller = ({ data }) => {
           {/* BestSeller */}
 
           <div className="mt-10">
-            <div className="grid grid-cols-5 gap-3 maxmd:grid maxmd:grid-cols-3">
+            <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-5">
               {data.map((books) => (
                 <div className="group relative" key={books.id}>
                   <Link
@@ -98,7 +98,7 @@ const HBestSeller = ({ data }) => {
                   </div>
                   <div className="flex items-center justify-center">
                     <button
-                      className="flex items-center gap-2 border-2 p-1 transition-all duration-300 hover:cursor-pointer hover:bg-orange-500 hover:text-white hover:transition-all hover:duration-300 maxmd:text-[15px]"
+                      className="flex items-center gap-2 border-2 p-1 transition-all duration-300 hover:cursor-pointer hover:bg-orange-500 hover:text-white hover:transition-all hover:duration-300 maxmd:text-[12px]"
                       onClick={() => addItem({ ...books, id: books.id })}
                     >
                       <i>
@@ -116,7 +116,7 @@ const HBestSeller = ({ data }) => {
 
           {/* FEATURED PRODUCTS */}
 
-          <div className="wrapper flex justify-between maxmd:grid maxmd:grid-cols-2 maxmd:gap-5">
+          <div className="wrapper grid grid-cols-1 justify-between md:grid-cols-2 lg:grid-cols-4">
             <div className="mt-10">
               <h2 className="mb-6 text-center text-[20px] font-bold maxmd:text-[15px]">
                 FEATURED PRODUCTS

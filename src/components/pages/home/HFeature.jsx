@@ -29,7 +29,7 @@ const HFeature = ({ data = [] }) => {
   };
 
   return (
-    <div className="font-body container mt-10">
+    <div className="container mt-10 font-body md:max-w-[830px] lg:max-w-[1600px]">
       <div className="wrapper mx-auto max-w-[1200px] p-5">
         <div className="flex flex-col items-center justify-center">
           <h1 className="text-4xl font-bold">FEATURED</h1>
@@ -40,7 +40,7 @@ const HFeature = ({ data = [] }) => {
         </div>
 
         <div>
-          <div className="grid grid-cols-5 gap-3 maxmd:grid-cols-3">
+          <div className="grid grid-cols-5 gap-3 maxsm:grid-cols-3 maxmd:grid-cols-3">
             {data.map((book) => (
               <div className="group relative" key={book.id}>
                 <Link
@@ -85,7 +85,7 @@ const HFeature = ({ data = [] }) => {
                 </div>
                 <div className="flex items-center justify-center">
                   <button
-                    className="flex items-center gap-2 border-2 p-1 transition-all duration-300 hover:cursor-pointer hover:bg-orange-500 hover:text-white hover:transition-all hover:duration-300 maxmd:text-[15px]"
+                    className="flex items-center gap-2 border-2 p-1 transition-all duration-300 hover:cursor-pointer hover:bg-orange-500 hover:text-white hover:transition-all hover:duration-300 maxmd:text-[12px]"
                     onClick={() => addItem({ ...book, id: book.id })}
                   >
                     <i>

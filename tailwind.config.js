@@ -16,11 +16,9 @@ export default {
         },
       },
       screens: {
-        maxsm: { max: "639px" }, // Max-width: 639px
-        maxmd: { max: "767px" }, // Max-width: 767px
-        maxlg: { max: "1023px" }, // Max-width: 1023px
-        maxxl: { max: "1279px" }, // Max-width: 1279px
-        max2xl: { max: "1535px" }, // Max-width: 1535px
+        maxsm: { max: "410px" },
+        maxmd: { max: "1023px" },
+        lg: "1024px",
       },
     },
   },

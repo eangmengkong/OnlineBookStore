@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <>
-      <div className="container bg-[#222222]">
+      <div className="container bg-[#222222] md:max-w-[830px] lg:max-w-[1600px]">
         <div className="wrapper mx-auto max-w-[1200px] p-5">
           <div className="flex justify-between maxmd:grid maxmd:grid-cols-2">
             <div className="maxmd:text-[13px]">

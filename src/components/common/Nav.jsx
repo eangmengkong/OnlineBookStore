@@ -32,13 +32,13 @@ const Nav = () => {
   };
   return (
     <>
-      <div className="container bg-gray-200">
+      <div className="container bg-gray-200 md:max-w-[830px] lg:max-w-[1600px]">
         <div className="wrapper mx-auto max-w-[1200px] p-3">
-          <div className="flex justify-between maxmd:items-center maxmd:justify-center">
+          <div className="lg:flex lg:justify-between">
             <div className="maxmd:hidden">
               <h3>Welcome to BookShop Online Shop!</h3>
             </div>
-            <div className="flex gap-8">
+            <div className="flex gap-8 md:place-content-center">
               <h3 className="flex items-center gap-1 transition-all duration-300 hover:cursor-pointer hover:text-orange-500 hover:transition-all hover:duration-300">
                 <i>
                   <IoDiamond />
@@ -62,7 +62,7 @@ const Nav = () => {
         </div>
       </div>
 
-      <nav className="container bg-white shadow-md">
+      <nav className="container bg-white shadow-md md:max-w-[830px] lg:max-w-[1600px]">
         <div className="wrapper mx-auto flex max-w-[1200px] items-center justify-between p-4">
           {/* Toggle Button for Mobile */}
           <button
@@ -100,7 +100,7 @@ const Nav = () => {
                   <div className="flex justify-evenly">
                     <div className="flex flex-col gap-3">
                       <h2>SHOP PAGE</h2>
-                      <div className="flex flex-col gap-3 text-gray-500 hover:cursor-pointer">
+                      <div className="flex flex-col gap-3 font-body text-gray-500 hover:cursor-pointer">
                         <Link to="/CartView">
                           <h3 className="hover:text-orange-500">My Cart</h3>
                         </Link>
@@ -115,19 +115,15 @@ const Nav = () => {
                       <h2>PRODUCT TYPES</h2>
                       <div className="flex flex-col gap-3 text-gray-500 hover:cursor-pointer">
                         <h3 className="hover:text-orange-500">
-                          Simple Product
+                          ភាពជាអ្នកដឹកនាំ
                         </h3>
                         <h3 className="hover:text-orange-500">
-                          Variable Product
+                          អប់រំ និងកុមារ
                         </h3>
+                        <h3 className="hover:text-orange-500">ចំណេះដឹងទូទៅ</h3>
+                        <h3 className="hover:text-orange-500">ប្រវត្តិសាស្ត</h3>
                         <h3 className="hover:text-orange-500">
-                          Virtual Product
-                        </h3>
-                        <h3 className="hover:text-orange-500">
-                          Grouped Product
-                        </h3>
-                        <h3 className="hover:text-orange-500">
-                          Downloadable Product
+                          ផ្នត់គំនិតជាជីវកម្ម
                         </h3>
                       </div>
                     </div>
@@ -135,7 +131,7 @@ const Nav = () => {
                       <div className="flex place-content-center">
                         <h2>BEST SELLERS</h2>
                       </div>
-                      <div className="grid grid-cols-2 gap-2">
+                      <div className="grid grid-cols-2 gap-2 font-body">
                         {Data.BestSeller.map((books) => (
                           <Link
                             to={`/BookView/${books.id}`}
@@ -145,11 +141,13 @@ const Nav = () => {
                             }
                           >
                             <div className="mb-5 flex gap-3">
-                              <img src={books.img} className="w-[50px]" />
+                              <img src={books.img} className="w-[100px]" />
                               <div>
-                                <h3 className="text-[12px] transition-all duration-300 hover:cursor-pointer hover:text-orange-500">
-                                  {books.product}
-                                </h3>
+                                <div className="w-[160px]">
+                                  <h3 className="text-[14px] transition-all duration-300 hover:cursor-pointer hover:text-orange-500">
+                                    {books.product}
+                                  </h3>
+                                </div>
                                 <div className="flex text-[10px]">
                                   <i className="star text-yellow-400">
                                     <FaStar />
@@ -233,7 +231,7 @@ const Nav = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`absolute left-0 top-0 flex h-[70vh] w-full transform flex-col gap-4 bg-white p-6 shadow-lg transition-transform duration-300 ${
+          className={`absolute left-0 top-0 flex h-[70vh] w-full transform flex-col gap-4 bg-white p-6 shadow-lg transition-transform duration-300 md:h-[35vh] ${
             isMenuOpen ? "z-50 translate-x-0" : "-translate-x-full"
           } maxmd:flex`}
         >

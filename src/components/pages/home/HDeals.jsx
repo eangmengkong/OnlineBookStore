@@ -8,7 +8,7 @@ const HDeals = () => {
   };
   return (
     <>
-      <div className="font-body container">
+      <div className="container font-body md:max-w-[830px] lg:max-w-[1600px]">
         <div className="wrapper mx-auto max-w-[1200px] p-5">
           <h2 className="text-xl font-bold">DEALS OF THE DAY</h2>
           <div className="flex justify-evenly gap-16 maxmd:grid maxmd:grid-cols-1">
@@ -39,7 +39,7 @@ const HDeals = () => {
                 className="h-[350px] w-[250px] group-hover:animate-ball-bounce"
               />
             </div>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-2">
               {Data.DealDay.map((books) => (
                 <Link
                   to={`/BookView/${books.id}`}

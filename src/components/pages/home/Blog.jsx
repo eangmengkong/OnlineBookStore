@@ -16,7 +16,7 @@ const Blog = () => {
   };
   return (
     <>
-      <div className="container">
+      <div className="container md:max-w-[830px] lg:max-w-[1600px]">
         <div className="wrapper mx-auto max-w-[1200px] p-5">
           <div className="flex flex-col items-center justify-center">
             <h1 className="text-4xl font-bold">LATEST BLOG</h1>
@@ -29,36 +29,42 @@ const Blog = () => {
           {/* Blog Carousel */}
           <div className="mb-10">
             <Swiper
-              slidesPerView={3}
-              spaceBetween={30}
-              pagination={{
-                clickable: true,
-              }}
-              autoplay={{
-                delay: 3000,
-                disableOnInteraction: false,
-              }}
+              slidesPerView={1}
+              spaceBetween={10}
+              pagination={{ clickable: true }}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
               modules={[Pagination, Autoplay]}
               className="mySwiper h-[420px]"
+              breakpoints={{
+                640: {
+                  slidesPerView: 1,
+                  spaceBetween: 10,
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 30,
+                },
+              }}
             >
               {Data.Blogs.map((data) => (
                 <SwiperSlide key={data.id}>
                   <Link
-                    to={`/BlogView/${data.id}>`}
+                    to={`/BlogView/${data.id}`}
                     onClick={() => handleLinkClick(`/BlogView/${data.id}`)}
                   >
-                    <div className="w-[350px] text-center maxmd:w-[130px] maxmd:shadow-lg">
+                    <div className="w-[350px] text-center maxmd:pb-2 maxmd:shadow-lg">
                       <div className="maxmd:flex maxmd:items-center maxmd:justify-center">
-                        <img
-                          src={data.img}
-                          className="w-[400px] maxmd:w-[120px]"
-                        />
+                        <img src={data.img} className="w-[400px]" />
                       </div>
                       <div>
-                        <div className="maxmd:ml-3 maxmd:flex maxmd:items-center">
-                          <h2 className="maxmd:w-[100px]">{data.title}</h2>
+                        <div className="">
+                          <h2 className="">{data.title}</h2>
                         </div>
-                        <p className="my-3 flex items-center justify-center maxmd:mr-6 maxmd:flex maxmd:flex-col">
+                        <p className="my-3 flex items-center justify-center">
                           <span className="flex items-center">
                             <i>
                               <CiUser />
@@ -73,7 +79,7 @@ const Blog = () => {
                             1 Comment
                           </span>
                         </p>
-                        <div className="h-[70px] w-[350px] overflow-hidden text-center maxmd:mr-2 maxmd:flex maxmd:w-[130px] maxmd:justify-center">
+                        <div className="h-[70px] w-[350px] overflow-hidden text-center">
                           <p>{data.desc}</p>
                         </div>
                         <button className="mt-3 font-bold text-red-500 hover:border-b-2 hover:border-b-red-500">

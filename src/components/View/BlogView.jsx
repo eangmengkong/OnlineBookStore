@@ -21,9 +21,9 @@ const BlogView = () => {
       <div>
         <Search />
       </div>
-      <div className="container">
-        <div className="wrapper mx-auto flex max-w-[1200px] justify-between gap-7 p-5">
-          <div className="float-left w-4/5">
+      <div className="container md:max-w-[830px] lg:max-w-[1600px]">
+        <div className="wrapper mx-auto flex flex-col justify-between gap-7 p-5 lg:max-w-[1200px]">
+          <div className="">
             <div className="mb-5 flex flex-col items-center justify-center text-center text-3xl font-bold">
               <h1 className="">
                 Sample post title with <br />
@@ -40,11 +40,18 @@ const BlogView = () => {
                 </span>
               </div>
             </div>
-            <img src={blog.BlogView.img1} alt="Main blog" />
-            <div className="p-4">
-              <p>{blog.desc}</p>
+            <div className="place-items-center">
+              <img
+                src={blog.BlogView.img1}
+                alt="Main blog"
+                className="w-[750px]"
+              />
+              <div className="p-4">
+                <p>{blog.desc}</p>
+              </div>
+              <img src={blog.BlogView.img2} className="w-[600px]" />
             </div>
-            <img src={blog.BlogView.img2} className="w-[600px]" />
+
             <hr className="mt-20" />
 
             {/* You Might Also Like */}
@@ -54,7 +61,7 @@ const BlogView = () => {
               <h3>You Might Also Like</h3>
             </div>
 
-            <div className="grid grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 place-items-center gap-5 md:grid-cols-3 lg:grid-cols-3">
               {ViewData[0].BlogviewData.AlsoLike.map((item) => (
                 <div key={item.id} className="w-[250px]">
                   <img src={item.img} className="w-[250px]" alt={item.title} />
@@ -74,7 +81,7 @@ const BlogView = () => {
 
           {/* Recent Posts */}
 
-          <div className="float-left w-2/5">
+          <div className="">
             <div className="mb-6 mt-[60px]">
               <h3 className="font-bold">Recent Posts</h3>
             </div>

@@ -23,10 +23,10 @@ const Hero = () => {
       <div>
         <Search />
       </div>
-      <div className="font-body container">
+      <div className="container font-body md:max-w-[830px] lg:max-w-[1600px]">
         <div className="wrapper mx-auto max-w-[1200px]">
           <div className="mt-7 flex justify-between px-8 py-5">
-            <div className="w-[220px] items-center bg-gray-700 p-4 text-white maxmd:hidden">
+            <div className="hidden w-[220px] items-center bg-gray-700 p-4 text-white md:block">
               <h2 className="mb-4 flex items-center gap-2">
                 <i className="text-[30px]">
                   <IoReorderThreeOutline />
@@ -48,19 +48,24 @@ const Hero = () => {
                 </i>
 
                 <div className="absolute left-full top-0 z-50 hidden bg-white text-black shadow-lg group-hover:block">
-                  <div className="grid w-[700px] grid-cols-3 gap-10 p-10">
+                  <div className="grid w-[550px] grid-cols-3 gap-2 p-10 md:grid-cols-2 lg:w-[770px] lg:grid-cols-3">
                     {Hero_data.children_book.map((book, index) => (
                       <div key={index}>
-                        <h1 className="text-lg font-bold">{book.title}</h1>
-                        <ul className="mt-2 list-none">
-                          {[book.List1, book.List2, book.List3, book.List4].map(
+                        <div className="w-[230px]">
+                          <h1 className="text-lg font-bold">{book.title}</h1>
+                        </div>
+                        <ol className="mt-2 w-[210px] list-decimal hover:cursor-pointer">
+                          {[book.List1, book.List2, book.List3].map(
                             (item, i) => (
-                              <li key={i} className="hover:underline">
+                              <li
+                                key={i}
+                                className="transition-all ease-in-out hover:text-orange-500"
+                              >
                                 {item}
                               </li>
                             ),
                           )}
-                        </ul>
+                        </ol>
                       </div>
                     ))}
                   </div>
@@ -76,19 +81,24 @@ const Hero = () => {
                   <FaCaretRight />
                 </i>
                 <div className="absolute left-full top-0 z-50 hidden bg-white text-black shadow-lg group-hover:block">
-                  <div className="grid w-[700px] grid-cols-3 gap-10 p-10">
+                  <div className="grid w-[550px] grid-cols-3 gap-2 p-10 md:grid-cols-2 lg:w-[770px] lg:grid-cols-3">
                     {Hero_data.Business_Money.map((book, index) => (
                       <div key={index}>
-                        <h1 className="text-lg font-bold">{book.title}</h1>
-                        <ul className="mt-2 list-none">
-                          {[book.List1, book.List2, book.List3, book.List4].map(
+                        <div className="w-[230px]">
+                          <h1 className="text-lg font-bold">{book.title}</h1>
+                        </div>
+                        <ol className="mt-2 w-[210px] list-decimal hover:cursor-pointer">
+                          {[book.List1, book.List2, book.List3].map(
                             (item, i) => (
-                              <li key={i} className="hover:underline">
+                              <li
+                                key={i}
+                                className="transition-all ease-in-out hover:text-orange-500"
+                              >
                                 {item}
                               </li>
                             ),
                           )}
-                        </ul>
+                        </ol>
                       </div>
                     ))}
                   </div>
@@ -105,7 +115,7 @@ const Hero = () => {
               ))}
             </div>
 
-            <div className="w-[870px] maxmd:w-[350px]">
+            <div className="w-[340px] md:w-[500px] lg:w-[870px]">
               <Swiper
                 spaceBetween={30}
                 centeredSlides={true}
