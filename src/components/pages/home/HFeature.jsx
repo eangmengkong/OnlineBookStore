@@ -29,7 +29,7 @@ const HFeature = ({ data = [] }) => {
   };
 
   return (
-    <div className="container mt-10 font-body md:max-w-[830px] lg:max-w-[1600px]">
+    <div className="container mt-10 font-body sm:min-w-[969px] md:max-w-[830px] lg:max-w-[1920px]">
       <div className="wrapper mx-auto max-w-[1200px] p-5">
         <div className="flex flex-col items-center justify-center">
           <h1 className="text-4xl font-bold">FEATURED</h1>

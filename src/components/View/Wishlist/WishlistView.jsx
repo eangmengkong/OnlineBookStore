@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const WishlistView = () => {
-  const { wishlist, removeFromWishlist } = useWishlist();
+  const { wishlist, removeFromWishlist, clearWishlist } = useWishlist();
   const { addItem } = useCart();
   const navigate = useNavigate();
   const [selectedItems, setSelectedItems] = useState([]);
@@ -29,7 +29,7 @@ const WishlistView = () => {
 
   const handleAddAllToCart = () => {
     wishlist.forEach((item) => addItem(item));
-    alert("All items added to the cart!");
+    navigate("/CartView");
   };
 
   const handleSelectItem = (id) => {
@@ -123,6 +123,12 @@ const WishlistView = () => {
           </button>
         </div>
         <div className="flex flex-col gap-3 md:flex-row">
+          <button
+            onClick={clearWishlist}
+            className="rounded bg-red-600 px-4 py-2 text-white hover:bg-red-700"
+          >
+            Clear Wishlist
+          </button>
           <button
             onClick={handleAddSelectedToCart}
             className="rounded bg-gray-800 px-4 py-2 text-white hover:bg-gray-900"

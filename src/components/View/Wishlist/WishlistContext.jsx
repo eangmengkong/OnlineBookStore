@@ -1,11 +1,22 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 // WishlistContext.js
 const WishlistContext = createContext();
 
 // eslint-disable-next-line react/prop-types
 export const WishlistProvider = ({ children }) => {
-  const [wishlist, setWishlist] = useState([]);
+  const [wishlist, setWishlist] = useState(() => {
+    try {
+      const storewishlist = localStorage.getItem("wishlist");
+      return storewishlist ? JSON.parse(storewishlist) : [];
+    } catch {
+      return [];
+    }
+  });
+
+  useEffect(() => {
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+  }, [wishlist]);
 
   const addToWishlist = (book) => {
     setWishlist((prev) => {
@@ -18,9 +29,13 @@ export const WishlistProvider = ({ children }) => {
     setWishlist((prev) => prev.filter((item) => item.id !== id));
   };
 
+  const clearWishlist = () => {
+    setWishlist([]);
+    localStorage.removeItem("wishlist");
+  };
   return (
     <WishlistContext.Provider
-      value={{ wishlist, addToWishlist, removeFromWishlist }}
+      value={{ wishlist, addToWishlist, removeFromWishlist, clearWishlist }}
     >
       {children}
     </WishlistContext.Provider>

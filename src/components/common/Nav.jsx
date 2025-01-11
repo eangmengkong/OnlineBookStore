@@ -32,7 +32,7 @@ const Nav = () => {
   };
   return (
     <>
-      <div className="container bg-gray-200 md:max-w-[830px] lg:max-w-[1600px]">
+      <div className="container bg-gray-200 sm:min-w-[969px] md:max-w-[830px] lg:max-w-[1920px]">
         <div className="wrapper mx-auto max-w-[1200px] p-3">
           <div className="lg:flex lg:justify-between">
             <div className="maxmd:hidden">
@@ -62,7 +62,7 @@ const Nav = () => {
         </div>
       </div>
 
-      <nav className="container bg-white shadow-md md:max-w-[830px] lg:max-w-[1600px]">
+      <nav className="container bg-white shadow-md sm:min-w-[969px] md:max-w-[830px] lg:max-w-[1920px]">
         <div className="wrapper mx-auto flex max-w-[1200px] items-center justify-between p-4">
           {/* Toggle Button for Mobile */}
           <button
