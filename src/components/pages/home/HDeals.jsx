@@ -8,7 +8,7 @@ const HDeals = () => {
   };
   return (
     <>
-      <div className="container font-body sm:min-w-[969px] md:max-w-[830px] lg:max-w-[1920px]">
+      <div className="container font-body sm:min-w-[569px] md:max-w-[830px] lg:max-w-[1920px]">
         <div className="wrapper mx-auto max-w-[1200px] p-5">
           <h2 className="text-xl font-bold">DEALS OF THE DAY</h2>
           <div className="flex justify-evenly gap-16 maxmd:grid maxmd:grid-cols-1">

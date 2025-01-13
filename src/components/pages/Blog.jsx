@@ -32,8 +32,8 @@ const Blog = () => {
       <div>
         <Search />
       </div>
-      <div className="container">
-        <div className="wrapper mx-auto grid max-w-[1200px] grid-cols-2 gap-5 p-5 maxmd:grid maxmd:grid-cols-1">
+      <div className="container sm:min-w-[569px] md:max-w-[830px] lg:max-w-[1920px]">
+        <div className="wrapper mx-auto grid max-w-[1200px] grid-cols-1 gap-5 p-5 md:grid-cols-2 lg:grid-cols-2">
           {currentItems.map((data) => (
             <Link
               to={`/BlogView/${data.id}>`}

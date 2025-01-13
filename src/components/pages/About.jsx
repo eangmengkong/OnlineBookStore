@@ -15,7 +15,7 @@ const About = () => {
       <div>
         <Search />
       </div>
-      <div className="container">
+      <div className="container sm:min-w-[569px] md:max-w-[830px] lg:max-w-[1920px]">
         <div className="wrapper mx-auto max-w-[1200px] p-3">
           <div className="flex flex-col items-center justify-center">
             <div className="flex w-full items-center justify-center">
@@ -24,14 +24,14 @@ const About = () => {
           </div>
 
           <div className="mt-10">
-            <div className="flex justify-between maxmd:flex maxmd:flex-col">
-              <div className="w-[350px]">
+            <div className="justify-between md:flex lg:flex">
+              <div className="w-[350px] md:w-[250px] lg:w-[350px]">
                 <i className="text-[4rem] text-orange-500">
                   <FaHandshake />
                 </i>
 
                 <div className="text-justify">
-                  <h2 className="text-2xl font-bold">TESTTIMONAL</h2>
+                  <h2 className="text-2xl font-bold"> Testtimonal</h2>
                   <p>
                     Click edit button to change this text. Lorem ipsum dolor sit
                     amet, consectetur adipiscing elit. Ut elit tellus, luctus
@@ -42,7 +42,7 @@ const About = () => {
                   </p>
                 </div>
               </div>
-              <div className="w-[350px]">
+              <div className="w-[350px] md:w-[250px] lg:w-[350px]">
                 <i className="text-[4rem] text-orange-500">
                   <FaUsers />
                 </i>
@@ -59,7 +59,7 @@ const About = () => {
                   </p>
                 </div>
               </div>
-              <div className="w-[350px]">
+              <div className="w-[350px] md:w-[250px] lg:w-[350px]">
                 <i className="text-[4rem] text-orange-500">
                   <FaChartLine />
                 </i>
@@ -79,7 +79,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className="my-20 flex justify-evenly maxmd:grid maxmd:grid-cols-2">
+          <div className="my-20 grid grid-cols-2 justify-evenly md:flex lg:flex">
             {stats.map((stats, index) => (
               <div key={index} className="text-center">
                 <h1 className="p-4 text-6xl font-bold text-orange-500">

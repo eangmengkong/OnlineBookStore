@@ -1,13 +1,11 @@
 const Footer = () => {
   return (
     <>
-      <div className="container bg-[#222222] sm:min-w-[969px] md:max-w-[830px] lg:max-w-[1920px]">
+      <div className="container bg-[#222222] sm:min-w-[569px] md:max-w-[830px] lg:max-w-[1920px]">
         <div className="wrapper mx-auto max-w-[1200px] p-5">
-          <div className="flex justify-between maxmd:grid maxmd:grid-cols-2">
-            <div className="maxmd:text-[13px]">
-              <h1 className="my-5 text-[23px] font-bold text-white maxmd:text-[15px]">
-                EXTRAS
-              </h1>
+          <div className="grid grid-cols-2 justify-between md:flex lg:flex">
+            <div>
+              <h1 className="my-5 text-[23px] font-bold text-white">EXTRAS</h1>
 
               <div className="text-gray-400">
                 <p className="transition-all duration-300 hover:cursor-pointer hover:text-orange-500 hover:transition-all hover:duration-300">
@@ -27,8 +25,8 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-            <div className="maxmd:text-[13px]">
-              <h1 className="my-5 text-[23px] font-bold text-white maxmd:text-[15px]">
+            <div>
+              <h1 className="my-5 text-[23px] font-bold text-white">
                 INFORMATION
               </h1>
               <div className="text-gray-400">
@@ -49,8 +47,8 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-            <div className="maxmd:text-[13px]">
-              <h1 className="my-5 text-[23px] font-bold text-white maxmd:text-[15px]">
+            <div>
+              <h1 className="my-5 text-[23px] font-bold text-white">
                 MY ACCOUNT
               </h1>
               <div className="text-gray-400">
@@ -71,9 +69,9 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-            <div className="maxmd:text-[13px]">
-              <h1 className="my-5 text-[23px] font-bold text-white maxmd:text-[15px]">
-                STORE INFORMATION
+            <div>
+              <h1 className="my-5 text-[23px] font-bold text-white">
+                STORE INFO
               </h1>
               <div className="text-gray-400">
                 <p className="text-white">My Company</p>
@@ -91,9 +89,12 @@ const Footer = () => {
           </div>
           <hr className="my-10" />
 
-          <div className="flex justify-between maxmd:text-[13px]">
+          <div className="flex justify-between">
             <div>
-              <h3 className="text-white"> All Rights Reserved</h3>
+              <h3 className="hidden text-white md:block lg:block">
+                {" "}
+                All Rights Reserved
+              </h3>
             </div>
             <div className="flex gap-6 text-gray-400">
               <div className="transition-all duration-300 hover:cursor-pointer hover:text-orange-500 hover:transition-all hover:duration-300">

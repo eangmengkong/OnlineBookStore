@@ -2,7 +2,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { IoIosSearch } from "react-icons/io";
 const Search = () => {
   return (
-    <div className="container bg-orange-400 sm:min-w-[969px] md:max-w-[830px] lg:max-w-[1920px]">
+    <div className="container bg-orange-400 sm:min-w-[569px] md:max-w-[830px] lg:max-w-[1920px]">
       <div className="wrapper mx-auto flex max-w-[1200px] items-center justify-between p-5">
         <div className="bg-gray-800 px-5 py-3 text-white maxmd:hidden">
           <h3 className="flex items-baseline gap-2">
@@ -17,7 +17,7 @@ const Search = () => {
             type="text"
             placeholder="Search the products"
             required
-            className="w-[810px] p-3 sm:min-w-[820px] maxsm:max-w-[250px] maxmd:w-[620px]"
+            className="w-[810px] p-3 sm:min-w-[680px] maxsm:max-w-[250px] maxmd:w-[620px]"
           />
           <div className="bg-gray-800 px-5 py-3 text-white transition-all duration-300 hover:cursor-pointer hover:bg-orange-500 hover:transition-all hover:duration-300">
             <button className="flex items-center gap-1 text-[17px]">

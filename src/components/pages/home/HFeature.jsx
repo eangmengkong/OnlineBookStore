@@ -29,7 +29,7 @@ const HFeature = ({ data = [] }) => {
   };
 
   return (
-    <div className="container mt-10 font-body sm:min-w-[969px] md:max-w-[830px] lg:max-w-[1920px]">
+    <div className="container mt-10 font-body sm:min-w-[569px] md:max-w-[830px] lg:max-w-[1920px]">
       <div className="wrapper mx-auto max-w-[1200px] p-5">
         <div className="flex flex-col items-center justify-center">
           <h1 className="text-4xl font-bold">FEATURED</h1>
@@ -40,7 +40,7 @@ const HFeature = ({ data = [] }) => {
         </div>
 
         <div>
-          <div className="grid grid-cols-5 gap-3 maxsm:grid-cols-3 maxmd:grid-cols-3">
+          <div className="grid grid-cols-3 gap-3 md:grid-cols-4 lg:grid-cols-5">
             {data.map((book) => (
               <div className="group relative" key={book.id}>
                 <Link

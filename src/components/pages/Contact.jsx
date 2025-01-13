@@ -6,7 +6,7 @@ const Contact = () => {
       <div>
         <Search />
       </div>
-      <div className="container">
+      <div className="container sm:min-w-[569px] md:max-w-[830px] lg:max-w-[1920px]">
         <div className="wrapper mx-auto max-w-[1200px] p-5">
           <div className="my-14">
             <iframe
@@ -16,7 +16,7 @@ const Contact = () => {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="maxmd:w-[350px]"
+              className="w-[350px] md:w-[800px] lg:w-[1200px]"
             ></iframe>
           </div>
           <div className="flex flex-col items-center justify-center">
@@ -28,8 +28,8 @@ const Contact = () => {
             </p>
           </div>
 
-          <form action="">
-            <div className="flex gap-3 maxmd:flex maxmd:flex-col">
+          <form action="" className="md:place-items-center">
+            <div className="gap-3 lg:flex">
               <div className="flex flex-col">
                 <label className="font-bold">
                   Name <span className="text-lg text-red-500">*</span>

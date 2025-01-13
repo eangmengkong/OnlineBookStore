@@ -81,7 +81,7 @@ const WishlistView = () => {
                   <td className="border border-gray-200 p-2">
                     ${item.price.toFixed(2)}
                   </td>
-                  <td className="border border-gray-200 p-2">
+                  <td className="border border-gray-200 p-2 md:text-[15px]">
                     {item.dateAdded}
                   </td>
                   <td className="border border-gray-200 p-2">
@@ -97,7 +97,7 @@ const WishlistView = () => {
                   </td>
                   <td className="border border-gray-200 p-2">
                     <button
-                      className="rounded bg-gray-800 px-3 py-1 text-white hover:bg-gray-900"
+                      className="rounded bg-gray-800 px-3 py-1 text-white hover:bg-gray-900 md:text-[13px]"
                       onClick={() => handleAddToCart(item)}
                     >
                       Add to Cart
@@ -118,26 +118,26 @@ const WishlistView = () => {
             <option>Move to Favorites</option>
             <option>Delete Selected</option>
           </select>
-          <button className="rounded bg-gray-800 px-4 py-2 text-white hover:bg-gray-900">
+          <button className="rounded bg-gray-800 px-4 py-2 text-white hover:bg-gray-900 md:text-[13px]">
             Apply Action
           </button>
         </div>
         <div className="flex flex-col gap-3 md:flex-row">
           <button
             onClick={clearWishlist}
-            className="rounded bg-red-600 px-4 py-2 text-white hover:bg-red-700"
+            className="rounded bg-red-600 px-4 py-2 text-white hover:bg-red-700 md:text-[13px]"
           >
             Clear Wishlist
           </button>
           <button
             onClick={handleAddSelectedToCart}
-            className="rounded bg-gray-800 px-4 py-2 text-white hover:bg-gray-900"
+            className="rounded bg-gray-800 px-4 py-2 text-white hover:bg-gray-900 md:text-[13px]"
           >
             Add Selected to Cart
           </button>
           <button
             onClick={handleAddAllToCart}
-            className="rounded bg-gray-800 px-4 py-2 text-white hover:bg-gray-900"
+            className="rounded bg-gray-800 px-4 py-2 text-white hover:bg-gray-900 md:text-[13px]"
           >
             Add All to Cart
           </button>

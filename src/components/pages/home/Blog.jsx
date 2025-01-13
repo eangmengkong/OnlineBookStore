@@ -16,7 +16,7 @@ const Blog = () => {
   };
   return (
     <>
-      <div className="container sm:min-w-[969px] md:max-w-[830px] lg:max-w-[1920px]">
+      <div className="container sm:min-w-[569px] md:max-w-[830px] lg:max-w-[1920px]">
         <div className="wrapper mx-auto max-w-[1200px] p-5">
           <div className="flex flex-col items-center justify-center">
             <h1 className="text-4xl font-bold">LATEST BLOG</h1>

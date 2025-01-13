@@ -48,7 +48,7 @@ const BookView = () => {
       <div>
         <Search />
       </div>
-      <div className="font-body flex flex-col justify-between gap-16 lg:flex-row lg:items-center">
+      <div className="flex flex-col justify-between gap-16 font-body lg:flex-row lg:items-center">
         <div className="mb-12 flex flex-col items-center gap-6 p-6 lg:w-2/4">
           <img
             src={activeImg}
@@ -74,8 +74,10 @@ const BookView = () => {
             <h1 className="text-3xl font-bold">{book.name}</h1>
             <h3 className="text-xl font-bold">{book.product}</h3>
           </div>
-          <div className="w-[630px]">
-            <p className="text-gray-700">{book.desc}</p>
+          <div className="w-[370px] md:w-[800px] lg:w-[700px]">
+            <p className="text-[20px] text-gray-700 md:text-[24px] lg:text-[18px]">
+              {book.desc}
+            </p>
           </div>
           <h6 className="text-2xl font-semibold">$ {book.price}</h6>
           <div className="flex flex-row items-center gap-3 maxmd:flex maxmd:flex-col">

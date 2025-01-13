@@ -23,7 +23,7 @@ const Hero = () => {
       <div>
         <Search />
       </div>
-      <div className="container font-body sm:min-w-[969px] md:max-w-[830px] lg:max-w-[1920px]">
+      <div className="container font-body sm:min-w-[569px] md:max-w-[830px] lg:max-w-[1920px]">
         <div className="wrapper mx-auto max-w-[1200px]">
           <div className="mt-7 flex justify-between px-8 py-5">
             <div className="hidden w-[220px] items-center bg-gray-700 p-4 text-white md:block">
