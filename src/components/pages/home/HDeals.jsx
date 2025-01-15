@@ -11,8 +11,8 @@ const HDeals = () => {
       <div className="container font-body sm:min-w-[569px] md:max-w-[830px] lg:max-w-[1920px]">
         <div className="wrapper mx-auto max-w-[1200px] p-5">
           <h2 className="text-xl font-bold">DEALS OF THE DAY</h2>
-          <div className="flex justify-evenly gap-16 maxmd:grid maxmd:grid-cols-1">
-            <div className="w-[400px] maxmd:w-[300px]">
+          <div className="flex flex-col justify-evenly gap-16 md:place-items-center lg:grid lg:grid-cols-3">
+            <div className="w-[300px] md:place-content-center">
               <div>
                 <h1 className="my-[90px] text-[70px] font-bold leading-none">
                   <span className="flex items-end justify-end">Love </span>
@@ -33,7 +33,7 @@ const HDeals = () => {
               <div></div>
             </div>
 
-            <div className="group flex items-center justify-center border-[3px] border-orange-400 px-10 py-16">
+            <div className="group flex items-center justify-center border-[3px] border-orange-400 px-10 py-16 md:w-[380px]">
               <img
                 src="/images1/homepageimages/DealsDayimg/DD1.jpeg"
                 className="h-[350px] w-[250px] group-hover:animate-ball-bounce"

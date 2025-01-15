@@ -91,7 +91,7 @@ const About = () => {
           </div>
 
           <div className="my-20">
-            <div className="flex items-center gap-5 maxmd:flex maxmd:flex-col">
+            <div className="items-center gap-5 lg:flex">
               <img src="images/about.jpg" className="w-[450px]" />
               <div>
                 <h1 className="text-[2rem] font-bold">

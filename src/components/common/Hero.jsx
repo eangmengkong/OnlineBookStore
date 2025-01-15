@@ -133,13 +133,13 @@ const Hero = () => {
                 {Hero_data.Slider.map((book) => (
                   <SwiperSlide key={book.id}>
                     <div
-                      className="relative ml-[60px] h-[580px] bg-cover bg-[center_left_150px] text-white maxmd:bg-[length:100%_100%] maxmd:bg-[center_left_50px] maxmd:bg-no-repeat"
+                      className="relative ml-[20px] h-[480px] bg-[length:100%_100%] bg-[center_left_50px] text-white lg:h-[580px] lg:bg-cover lg:bg-[center_left_150px] lg:bg-no-repeat"
                       style={{
                         backgroundImage: `url(${book.img})`,
                       }}
                     >
-                      <div className="absolute ml-[130px] mt-[200px] flex flex-col items-center justify-center text-center text-gray-600 maxmd:left-[-130px] maxmd:w-[150px]">
-                        <h1 className="text-[2rem] font-bold maxmd:text-[22px]">
+                      <div className="absolute left-[-130px] ml-[130px] mt-[100px] flex w-[150px] flex-col items-center justify-center text-center text-gray-600 lg:mt-[200px] lg:w-[350px]">
+                        <h1 className="text-[22px] font-bold lg:text-[2rem]">
                           {book.BookName}
                         </h1>
                         <h4 className="flex gap-2 text-2xl">

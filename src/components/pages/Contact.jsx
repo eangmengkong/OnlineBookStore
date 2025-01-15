@@ -21,7 +21,7 @@ const Contact = () => {
           </div>
           <div className="flex flex-col items-center justify-center">
             <h1 className="text-4xl font-bold">Contact Information</h1>
-            <p className="p-7 text-center maxmd:w-[380px]">
+            <p className="w-[380px] p-7 text-center">
               Need to know where the your wishlisted item is on sale or our give
               away sale code? <br />
               We`re allways ready to help
@@ -37,7 +37,7 @@ const Contact = () => {
                 <input
                   type="text"
                   required
-                  className="w-[600px] border-2 p-2 maxmd:w-[350px]"
+                  className="w-[350px] border-2 p-2 md:w-[600px] lg:w-[600px]"
                 />
               </div>
               <div className="flex flex-col">
@@ -49,7 +49,7 @@ const Contact = () => {
                   name=""
                   id=""
                   required
-                  className="w-[600px] border-2 p-2 maxmd:w-[350px]"
+                  className="w-[350px] border-2 p-2 md:w-[600px] lg:w-[600px]"
                 />
               </div>
             </div>
@@ -62,7 +62,7 @@ const Contact = () => {
                 name=""
                 id=""
                 required
-                className="w-[1212px] border-2 p-2 maxmd:w-[350px]"
+                className="w-[350px] border-2 p-2 md:w-[600px] lg:w-[1212px]"
               />
             </div>
             <div className="flex flex-col">
@@ -74,7 +74,7 @@ const Contact = () => {
                 id=""
                 cols="40"
                 rows="10"
-                className="w-[1212px] border-2 p-2 maxmd:w-[350px]"
+                className="w-[350px] border-2 p-2 md:w-[600px] lg:w-[1212px]"
               ></textarea>
             </div>
             <div className="flex items-center justify-center">

@@ -40,7 +40,7 @@ const Blog = () => {
               key={data.id}
               onClick={() => handleLinkClick(`/BlogView/${data.id}`)}
             >
-              <div className="w-[550px] text-center maxmd:w-[350px]">
+              <div className="w-[350px] text-center lg:w-[550px]">
                 <img src={data.img} />
                 <div>
                   <h2>{data.title}</h2>

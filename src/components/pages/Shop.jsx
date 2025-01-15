@@ -33,15 +33,15 @@ const Shop = () => {
 
   const [currentPage, setCurrentPage] = useState(0);
 
-  const itemsPerPage = 6;
+  const itemsPerPage = 20;
 
-  const pageCount = Math.ceil(Data.Blogs.length / itemsPerPage);
+  const pageCount = Math.ceil(Data.Shop.length / itemsPerPage);
 
   const handlePageClick = ({ selected }) => {
     setCurrentPage(selected);
   };
 
-  const currentItems = Data.Feature.slice(
+  const currentItems = Data.Shop.slice(
     currentPage * itemsPerPage,
     (currentPage + 1) * itemsPerPage,
   );
@@ -66,7 +66,7 @@ const Shop = () => {
                       className="w-[230px]"
                     />
                   </Link>
-                  <div className="absolute bottom-[145px] left-0 right-0 flex h-[32px] items-center justify-center gap-4 bg-orange-500 p-1 text-[20px] text-black opacity-0 transition-opacity duration-300 group-hover:opacity-100 maxmd:bottom-[140px]">
+                  <div className="absolute bottom-[140px] left-0 right-0 flex h-[32px] items-center justify-center gap-4 bg-orange-500 p-1 text-[20px] text-black opacity-0 transition-opacity duration-300 group-hover:opacity-100 lg:bottom-[145px]">
                     <div
                       className="rounded-[50%] bg-black p-1 text-white hover:bg-white hover:text-orange-400"
                       onClick={() => handleAddToWishlist(book)}
@@ -92,13 +92,13 @@ const Shop = () => {
                       </span>
                       ${book.price}
                     </h3>
-                    <h2 className="transition-all duration-300 hover:cursor-pointer hover:text-orange-500 hover:transition-all hover:duration-300 maxmd:text-[14px]">
+                    <h2 className="text-[14px] transition-all duration-300 hover:cursor-pointer hover:text-orange-500 hover:transition-all hover:duration-300 lg:text-[17px]">
                       {book.product}
                     </h2>
                   </div>
                   <div className="flex items-center justify-center">
                     <button
-                      className="flex items-center gap-2 border-2 p-1 transition-all duration-300 hover:cursor-pointer hover:bg-orange-500 hover:text-white hover:transition-all hover:duration-300 maxmd:text-[12px]"
+                      className="flex items-center gap-2 border-2 p-1 text-[12px] transition-all duration-300 hover:cursor-pointer hover:bg-orange-500 hover:text-white hover:transition-all hover:duration-300 lg:text-[15px]"
                       onClick={() => addItem({ ...book, id: book.id })}
                     >
                       <i>

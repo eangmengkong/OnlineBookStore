@@ -55,20 +55,20 @@ const BookView = () => {
             alt=""
             className="aspect-square h-[400px] w-[300px] rounded-xl object-cover"
           />
-          <div className="flex h-24 flex-row justify-between gap-4 maxmd:-ml-4">
+          <div className="-ml-8 flex h-24 flex-row justify-between gap-4">
             {book.bookview &&
               Object.values(book.bookview).map((img, index) => (
                 <img
                   key={index}
                   src={img}
                   alt={`book-${index}`}
-                  className="h-[150px] w-28 cursor-pointer rounded-md maxmd:w-20"
+                  className="h-[150px] w-[120px] cursor-pointer rounded-md lg:w-28"
                   onClick={() => setActiveImage(img)}
                 />
               ))}
           </div>
         </div>
-        <div className="flex flex-col gap-4 lg:w-2/4 maxmd:p-4">
+        <div className="flex flex-col gap-4 p-4 lg:w-2/4">
           <div>
             <span className="font-semibold text-violet-600">{book.title}</span>
             <h1 className="text-3xl font-bold">{book.name}</h1>
@@ -80,7 +80,7 @@ const BookView = () => {
             </p>
           </div>
           <h6 className="text-2xl font-semibold">$ {book.price}</h6>
-          <div className="flex flex-row items-center gap-3 maxmd:flex maxmd:flex-col">
+          <div className="flex flex-col items-center gap-3 lg:flex lg:flex-row">
             <button
               className="flex h-full w-[300px] items-center gap-3 rounded-xl bg-violet-800 px-16 py-3 font-semibold text-white hover:bg-violet-900"
               onClick={handleAddToWishlist}

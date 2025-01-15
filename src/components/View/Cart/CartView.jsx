@@ -114,7 +114,7 @@ const CartView = () => {
           )}
 
           {/* Coupon Section */}
-          <div className="mt-4 flex items-center justify-between gap-2 maxmd:flex maxmd:flex-col">
+          <div className="mt-4 items-center justify-between gap-2 lg:flex">
             <div className="flex gap-2">
               <input
                 type="text"
@@ -126,7 +126,7 @@ const CartView = () => {
               </button>
             </div>
             <button
-              className="rounded-lg bg-gray-300 px-4 py-2 text-black"
+              className="mt-3 rounded-lg bg-gray-300 px-4 py-2 text-black"
               onClick={() => emptyCart()}
             >
               Clear Cart

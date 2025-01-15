@@ -15,11 +15,7 @@ export default {
           "50%": { transform: " scale(1.1)" },
         },
       },
-      screens: {
-        maxsm: { max: "410px" },
-        maxmd: { max: "1023px" },
-        lg: "1024px",
-      },
+    
     },
   },
   plugins: [],

@@ -56,8 +56,8 @@ const Blog = () => {
                     to={`/BlogView/${data.id}`}
                     onClick={() => handleLinkClick(`/BlogView/${data.id}`)}
                   >
-                    <div className="w-[350px] text-center maxmd:pb-2 maxmd:shadow-lg">
-                      <div className="maxmd:flex maxmd:items-center maxmd:justify-center">
+                    <div className="w-[350px] pb-2 text-center lg:shadow-lg">
+                      <div className="items-center justify-center lg:flex">
                         <img src={data.img} className="w-[400px]" />
                       </div>
                       <div>
@@ -95,20 +95,20 @@ const Blog = () => {
           <hr />
 
           <div className="my-14">
-            <div className="flex justify-between maxmd:grid maxmd:grid-cols-2 maxmd:gap-5 maxmd:text-[10px]">
-              <div className="flex items-center gap-3 leading-tight">
+            <div className="grid grid-cols-2 justify-between gap-5 text-[10px] md:flex lg:flex">
+              <div className="flex items-center gap-3 leading-tight lg:w-[250px]">
                 <img src="images/logo/logo-1.png" className="h-9 w-[40px]" />
                 <div>
-                  <h2 className="text-[20px] font-bold maxmd:text-[12px]">
+                  <h2 className="mb-2 text-[12px] font-bold lg:text-[20px]">
                     Free Shipping item
                   </h2>
                   <p className="text-gray-500">For any order over $100</p>
                 </div>
               </div>
-              <div className="flex items-center gap-3 leading-tight maxmd:w-[180px]">
+              <div className="flex w-[180px] items-center gap-3 leading-tight">
                 <img src="images/logo/logo-2.png" className="h-9 w-[40px]" />
                 <div>
-                  <h2 className="text-[20px] font-bold maxmd:text-[12px]">
+                  <h2 className="mb-2 w-[250px] text-[12px] font-bold lg:text-[20px]">
                     Money back gurantee
                   </h2>
                   <p className="text-gray-500">100% money back guarantee</p>
@@ -117,7 +117,7 @@ const Blog = () => {
               <div className="flex items-center gap-3 leading-tight">
                 <img src="images/logo/logo-3.png" className="h-9 w-[40px]" />
                 <div>
-                  <h2 className="text-[20px] font-bold maxmd:text-[12px]">
+                  <h2 className="mb-2 text-[12px] font-bold lg:text-[20px]">
                     Cash on delivery
                   </h2>
                   <p className="text-gray-500">Lorem ipsum</p>
@@ -125,8 +125,8 @@ const Blog = () => {
               </div>
               <div className="flex items-center gap-3 leading-tight">
                 <img src="images/logo/logo-4.png" className="h-9 w-[40px]" />
-                <div>
-                  <h2 className="text-[20px] font-bold maxmd:text-[12px]">
+                <div className="">
+                  <h2 className="mb-2 text-[12px] font-bold lg:text-[20px]">
                     Help & Support
                   </h2>
                   <p className="text-gray-500">Call us: 011 999 888</p>

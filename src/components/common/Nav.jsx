@@ -35,7 +35,7 @@ const Nav = () => {
       <div className="container bg-gray-200 sm:min-w-[569px] md:max-w-[830px] lg:max-w-[1920px]">
         <div className="wrapper mx-auto max-w-[1200px] p-3">
           <div className="lg:flex lg:justify-between">
-            <div className="maxmd:hidden">
+            <div className="hidden lg:block">
               <h3>Welcome to BookShop Online Shop!</h3>
             </div>
             <div className="flex gap-8 md:place-content-center">
@@ -66,7 +66,7 @@ const Nav = () => {
         <div className="wrapper mx-auto flex max-w-[1200px] items-center justify-between p-4">
           {/* Toggle Button for Mobile */}
           <button
-            className="hidden maxmd:block"
+            className="lg:hidden"
             onClick={toggleMenu}
             aria-label="Toggle Menu"
           >
@@ -81,7 +81,7 @@ const Nav = () => {
           </div>
 
           {/* laptop */}
-          <div className="flex items-center gap-10 maxmd:hidden">
+          <div className="hidden items-center gap-10 lg:flex">
             <ul className="relative flex gap-8 text-[18px] font-semibold">
               <li className="group transition-all duration-300 hover:cursor-pointer hover:text-orange-500 hover:transition-all hover:duration-300">
                 <Link to="/home">Home</Link>
@@ -233,7 +233,7 @@ const Nav = () => {
         <div
           className={`absolute left-0 top-0 flex h-[70vh] w-full transform flex-col gap-4 bg-white p-6 shadow-lg transition-transform duration-300 md:h-[35vh] ${
             isMenuOpen ? "z-50 translate-x-0" : "-translate-x-full"
-          } maxmd:flex`}
+          } flex`}
         >
           <button
             className="self-end text-gray-800"

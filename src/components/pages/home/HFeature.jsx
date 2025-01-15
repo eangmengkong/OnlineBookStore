@@ -53,7 +53,7 @@ const HFeature = ({ data = [] }) => {
                     className="w-[230px]"
                   />
                 </Link>
-                <div className="absolute bottom-[145px] left-0 right-0 flex h-[32px] items-center justify-center gap-4 bg-orange-500 p-1 text-[20px] text-black opacity-0 transition-opacity duration-300 group-hover:opacity-100 maxmd:bottom-[140px]">
+                <div className="absolute bottom-[140px] left-0 right-0 flex h-[32px] items-center justify-center gap-4 bg-orange-500 p-1 text-[20px] text-black opacity-0 transition-opacity duration-300 group-hover:opacity-100 lg:bottom-[145px]">
                   <div
                     className="rounded-[50%] bg-black p-1 text-white hover:bg-white hover:text-orange-400"
                     onClick={() => handleAddToWishlist(book)}
@@ -79,13 +79,13 @@ const HFeature = ({ data = [] }) => {
                     </span>
                     ${book.price}
                   </h3>
-                  <h2 className="transition-all duration-300 hover:cursor-pointer hover:text-orange-500 hover:transition-all hover:duration-300 maxmd:text-[14px]">
+                  <h2 className="text-[14px] transition-all duration-300 hover:cursor-pointer hover:text-orange-500 hover:transition-all hover:duration-300 lg:text-[17px]">
                     {book.product}
                   </h2>
                 </div>
                 <div className="flex items-center justify-center">
                   <button
-                    className="flex items-center gap-2 border-2 p-1 transition-all duration-300 hover:cursor-pointer hover:bg-orange-500 hover:text-white hover:transition-all hover:duration-300 maxmd:text-[12px]"
+                    className="flex items-center gap-2 border-2 p-1 text-[12px] transition-all duration-300 hover:cursor-pointer hover:bg-orange-500 hover:text-white hover:transition-all hover:duration-300 lg:text-[15px]"
                     onClick={() => addItem({ ...book, id: book.id })}
                   >
                     <i>
@@ -102,7 +102,7 @@ const HFeature = ({ data = [] }) => {
         <div className="mt-10">
           <img
             src="images/banner-1.jpg"
-            className="maxmd:h-[90px]"
+            className="h-[100px] md:h-[130px] lg:h-[150px]"
             alt="Banner"
           />
         </div>

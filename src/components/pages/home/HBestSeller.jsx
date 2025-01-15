@@ -38,7 +38,7 @@ const HBestSeller = ({ data }) => {
             </p>
           </div>
 
-          <ul className="flex items-center justify-center gap-5 text-[20px] font-bold maxmd:gap-4 maxmd:text-[13px]">
+          <ul className="flex items-center justify-center gap-4 text-[21px] font-bold lg:gap-5 lg:text-[27px]">
             <li className="transition-all duration-300 ease-in-out hover:text-orange-600 hover:underline hover:duration-200 hover:ease-in-out">
               អភិវឌ្ឍខ្លួន
             </li>
@@ -66,7 +66,7 @@ const HBestSeller = ({ data }) => {
                       className="w-[230px]"
                     />
                   </Link>
-                  <div className="absolute bottom-[150px] left-0 right-0 flex h-[32px] items-center justify-center gap-4 bg-orange-500 p-1 text-[20px] text-black opacity-0 transition-opacity duration-300 group-hover:opacity-100 maxmd:bottom-[140px]">
+                  <div className="absolute bottom-[140px] left-0 right-0 flex h-[32px] items-center justify-center gap-4 bg-orange-500 p-1 text-[20px] text-black opacity-0 transition-opacity duration-300 group-hover:opacity-100 lg:bottom-[150px]">
                     <div
                       className="rounded-[50%] bg-black p-1 text-white hover:bg-white hover:text-orange-400"
                       onClick={() => handleAddToWishlist(books)}
@@ -92,13 +92,13 @@ const HBestSeller = ({ data }) => {
                       </span>
                       ${books.price}
                     </h3>
-                    <h2 className="transition-all duration-300 hover:cursor-pointer hover:text-orange-500 hover:transition-all hover:duration-300 maxmd:text-[14px]">
+                    <h2 className="text-[14px] transition-all duration-300 hover:cursor-pointer hover:text-orange-500 hover:transition-all hover:duration-300 lg:text-[17px]">
                       {books.product}
                     </h2>
                   </div>
                   <div className="flex items-center justify-center">
                     <button
-                      className="flex items-center gap-2 border-2 p-1 transition-all duration-300 hover:cursor-pointer hover:bg-orange-500 hover:text-white hover:transition-all hover:duration-300 maxmd:text-[12px]"
+                      className="flex items-center gap-2 border-2 p-1 text-[12px] transition-all duration-300 hover:cursor-pointer hover:bg-orange-500 hover:text-white hover:transition-all hover:duration-300 lg:text-[15px]"
                       onClick={() => addItem({ ...books, id: books.id })}
                     >
                       <i>
@@ -118,7 +118,7 @@ const HBestSeller = ({ data }) => {
 
           <div className="wrapper grid grid-cols-1 justify-between md:grid-cols-2 lg:grid-cols-4">
             <div className="mt-10">
-              <h2 className="mb-6 text-center text-[20px] font-bold maxmd:text-[15px]">
+              <h2 className="mb-6 text-center text-[23px] font-bold lg:text-[26px]">
                 FEATURED PRODUCTS
               </h2>
               {Data.Featured.map((books) => (
@@ -165,7 +165,7 @@ const HBestSeller = ({ data }) => {
             {/* SALE PRODUCTS */}
 
             <div className="mt-10">
-              <h2 className="mb-6 text-center text-[20px] font-bold maxmd:text-[15px]">
+              <h2 className="mb-6 text-center text-[23px] font-bold lg:text-[26px]">
                 SALE PRODUCTS
               </h2>
 
@@ -213,7 +213,7 @@ const HBestSeller = ({ data }) => {
             {/* RANDOM PRODUCTS */}
 
             <div className="mt-10">
-              <h2 className="mb-6 text-center text-[20px] font-bold maxmd:text-[15px]">
+              <h2 className="mb-6 text-center text-[23px] font-bold lg:text-[26px]">
                 RANDOM PRODUCTS
               </h2>
               {Data.Random.map((books) => (
@@ -258,7 +258,7 @@ const HBestSeller = ({ data }) => {
             </div>
             <img
               src="/images1/homepageimages/BestSellerimg/BS15.jpg"
-              className="mt-10 maxmd:h-[350px]"
+              className="mt-10 h-[350px] lg:h-[480px]"
             />
           </div>
         </div>
