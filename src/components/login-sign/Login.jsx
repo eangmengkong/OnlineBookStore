@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 // eslint-disable-next-line react/prop-types
 const Login = ({ onClose, onSignUpClick }) => {
   return (
@@ -40,7 +42,7 @@ const Login = ({ onClose, onSignUpClick }) => {
               </div>
 
               <button className="login bg-gray-600 p-3 font-bold text-white transition-all duration-300 hover:cursor-pointer hover:bg-orange-500 hover:transition-all hover:duration-300">
-                LOGIN
+                <Link to="/MyAccount">Login</Link>
               </button>
               <span className="flex place-content-center transition-all duration-300 hover:cursor-pointer hover:text-orange-500 hover:transition-all hover:duration-300">
                 <a href=""> Forgot your password? Get help</a>

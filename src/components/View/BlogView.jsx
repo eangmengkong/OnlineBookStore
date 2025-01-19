@@ -21,7 +21,7 @@ const BlogView = () => {
       <div>
         <Search />
       </div>
-      <div className="container md:max-w-[830px] lg:max-w-[1600px]">
+      <div className="container sm:min-w-[569px] md:max-w-[830px] lg:max-w-[1920px]">
         <div className="wrapper mx-auto flex flex-col justify-between gap-7 p-5 lg:max-w-[1200px]">
           <div className="">
             <div className="mb-5 flex flex-col items-center justify-center text-center text-3xl font-bold">

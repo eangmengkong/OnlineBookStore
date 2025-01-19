@@ -1,7 +1,8 @@
 import Search from "../../common/Search";
 import { useCart } from "react-use-cart";
-
+import { useNavigate } from "react-router-dom";
 const CartView = () => {
+  const navigate = useNavigate();
   const {
     isEmpty,
     totalUniqueItems,
@@ -12,6 +13,29 @@ const CartView = () => {
     removeItem,
     emptyCart,
   } = useCart();
+
+  const handleCheckout = () => {
+    const today = new Date().toLocaleDateString("en-CA"); // Get current date
+    const orderItems = items.map((book) => ({
+      id: book.id,
+      name: book.name,
+      img: book.img,
+      price: book.price,
+      dateAdded: today,
+      status: "In transit",
+    }));
+
+    // Retrieve existing orders from localStorage
+    const existingOrders = JSON.parse(localStorage.getItem("orders")) || [];
+
+    // Add new orders to localStorage
+    const updatedOrders = [...existingOrders, ...orderItems];
+    localStorage.setItem("orders", JSON.stringify(updatedOrders));
+
+    emptyCart();
+
+    navigate("/MyAccount/orders", { state: { orderItems } });
+  };
 
   return (
     <>
@@ -155,7 +179,10 @@ const CartView = () => {
             <span>Total</span>
             <span>${cartTotal}</span>
           </div>
-          <button className="mt-4 w-full rounded-lg bg-gray-800 py-2 text-white">
+          <button
+            className="mt-4 w-full rounded-lg bg-gray-800 py-2 text-white"
+            onClick={handleCheckout}
+          >
             PROCEED TO CHECKOUT
           </button>
         </div>

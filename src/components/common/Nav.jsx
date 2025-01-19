@@ -76,7 +76,7 @@ const Nav = () => {
           {/* Logo */}
           <div className="flex items-center justify-center">
             <Link to={"/home"}>
-              <img src="./images/logo-bookshop.png" alt="logo-bookshop" />
+              <img src="/images/logo-bookshop.png" alt="logo-bookshop" />
             </Link>
           </div>
 
@@ -108,7 +108,9 @@ const Nav = () => {
                         <Link to="/WishlistView">
                           <h3 className="hover:text-orange-500">My Wishlist</h3>
                         </Link>
-                        <h3 className="hover:text-orange-500">My Account</h3>
+                        <h3 className="hover:text-orange-500">
+                          <Link to="/MyAccount">My Account</Link>
+                        </h3>
                       </div>
                     </div>
                     <div className="flex flex-col gap-3">
@@ -276,6 +278,11 @@ const Nav = () => {
             <li>
               <Link to="/CartView" className="hover:text-orange-500">
                 Cart
+              </Link>
+            </li>
+            <li>
+              <Link to="/MyAccount " className="hover:text-orange-500">
+                My Account
               </Link>
             </li>
           </ul>
