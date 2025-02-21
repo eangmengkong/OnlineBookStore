@@ -9,4 +9,4 @@ Currently, two official plugins are available:
 ![image alt](https://github.com/eangmengkong/OnlineBookStore/blob/ac21ac9228e687eefccb69fa915d4e7505402b21/onlinebookstoreScreenshot.jpg)
 
 ## Live Demo 🌍  
-👉 [**Click here to view the demo**](https://khbookshop.netlify.app/)
+🔗 [khbookshop.netlify.app](https://khbookshop.netlify.app/)
