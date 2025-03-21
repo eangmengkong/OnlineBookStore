@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Pages from "./components/pages/Pages";
+import Pages from "./route/PagesRoute";
 import { CartProvider } from "react-use-cart"; // Import CartProvider
 import { WishlistProvider } from "./components/View/Wishlist/WishlistContext";
 import AOS from "aos";

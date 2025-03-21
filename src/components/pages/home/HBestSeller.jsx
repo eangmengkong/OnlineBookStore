@@ -6,7 +6,7 @@ import { BsArrowLeftRight } from "react-icons/bs";
 import { LuZoomIn } from "react-icons/lu";
 import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "react-use-cart";
-import Data from "./data/Data";
+import Data from "../../data/Data";
 import { useWishlist } from "../../View/Wishlist/WishlistContext";
 const HBestSeller = ({ data }) => {
   const { addToWishlist } = useWishlist();

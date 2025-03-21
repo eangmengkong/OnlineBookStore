@@ -1,9 +1,8 @@
 import Hero from "../../common/Hero";
-import Blog from "./Blog";
 import HBestSeller from "./HBestSeller";
 import HDeals from "./HDeals";
 import HFeature from "./HFeature";
-import Data from "./data/Data";
+import Data from "../../data/Data";
 
 const Home = () => {
   return (
@@ -12,7 +11,6 @@ const Home = () => {
       <HFeature data={Data.Feature} />
       <HDeals />
       <HBestSeller data={Data.BestSeller} />
-      <Blog />
     </>
   );
 };

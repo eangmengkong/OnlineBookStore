@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "react-use-cart";
 import { useWishlist } from "../View/Wishlist/WishlistContext";
 
-import Data from "./home/data/Data";
+import Data from "../data/Data";
 import ReactPaginate from "react-paginate";
 import Search from "../common/Search";
 import { useState } from "react";

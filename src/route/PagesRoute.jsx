@@ -4,24 +4,23 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import Home from "./home/Home";
-import Header from "../common/Header";
-import Shop from "./Shop";
-import Contact from "./Contact";
-import About from "./About";
-import Footer from "../common/Footer";
-import Blog from "./Blog";
-import BookView from "../View/BookView";
-import BlogView from "../View/BlogView";
-import CartView from "../View/Cart/CartView";
-import WishlistView from "../View/Wishlist/WishlistView";
-import MyAccount from "../login-sign/MyAccount/MyAccount";
+import Home from "../components/pages/home/Home";
+import Header from "../components/common/Header";
+import Shop from "../components/pages/Shop";
+import Contact from "../components/pages/Contact";
+import About from "../components/pages/About";
+import Footer from "../components/common/Footer";
+import BookView from "../components/View/Book/BookView";
+import CartView from "../components/View/Cart/CartView";
+import WishlistView from "../components/View/Wishlist/WishlistView";
+import MyAccount from "../components/login-sign/MyAccount/MyAccount";
 
 // Import subpages of MyAccount
-import Orders from "../login-sign/MyAccount/Orders";
+import Orders from "../components/login-sign/MyAccount/Orders";
 
-import Address from "../login-sign/MyAccount/Address";
-import AccountDetails from "../login-sign/MyAccount/AccountDetail";
+import Address from "../components/login-sign/MyAccount/Address";
+import AccountDetails from "../components/login-sign/MyAccount/AccountDetail";
+import Book from "../components/pages/Book";
 
 const Pages = () => {
   return (
@@ -33,11 +32,10 @@ const Pages = () => {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/shop" element={<Shop />} />
-            <Route path="/blog" element={<Blog />} />
+            <Route path="/book" element={<Book />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
             <Route path="/BookView/:id" element={<BookView />} />
-            <Route path="/BlogView/:id" element={<BlogView />} />
             <Route path="/MyAccount" element={<MyAccount />}>
               <Route
                 index

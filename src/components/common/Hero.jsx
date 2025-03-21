@@ -2,7 +2,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaCaretRight } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
-import Hero_data from "./data/HeroData";
+import Hero_data from "../data/HeroData";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";

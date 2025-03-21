@@ -1,6 +1,8 @@
-import Data from "./data/Data";
+import Data from "../../data/Data";
+
 import { Link, useNavigate } from "react-router-dom";
 const HDeals = () => {
+  const book = Data.Feature.find((item) => item.id === 1);
   const navigate = useNavigate();
   const handleLinkClick = (path) => {
     navigate(path);
@@ -34,10 +36,12 @@ const HDeals = () => {
             </div>
 
             <div className="group flex items-center justify-center border-[3px] border-orange-400 px-10 py-16 md:w-[380px]">
-              <img
-                src="/images1/homepageimages/DealsDayimg/DD1.jpeg"
-                className="h-[350px] w-[250px] group-hover:animate-ball-bounce"
-              />
+              <Link to={`/BookView/${book.id}`}>
+                <img
+                  src={book.img}
+                  className="h-[350px] w-[250px] group-hover:animate-ball-bounce"
+                />
+              </Link>
             </div>
             <div className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-2">
               {Data.DealDay.map((books) => (
