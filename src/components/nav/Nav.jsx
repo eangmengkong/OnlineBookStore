@@ -70,15 +70,6 @@ const Nav = () => {
               </li>
 
               <NavLink
-                to="/book"
-                className={({ isActive }) =>
-                  isActive ? "text-orange-400 underline" : "text-gray-700"
-                }
-              >
-                Book
-              </NavLink>
-
-              <NavLink
                 to="/contact"
                 className={({ isActive }) =>
                   isActive ? "text-orange-400 underline" : "text-gray-700"

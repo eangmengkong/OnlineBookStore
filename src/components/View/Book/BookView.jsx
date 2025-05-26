@@ -65,7 +65,7 @@ const BookView = () => {
           <div className="-ml-8 flex h-24 flex-row justify-between gap-4">
             {book.bookview &&
               Object.values(book.bookview)
-                .filter((img) => img) // Remove empty images
+                .filter((img) => img)
                 .map((img, index) => (
                   <img
                     key={index}

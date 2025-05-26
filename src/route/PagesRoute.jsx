@@ -17,10 +17,8 @@ import MyAccount from "../components/login-sign/MyAccount/MyAccount";
 
 // Import subpages of MyAccount
 import Orders from "../components/login-sign/MyAccount/Orders";
-
 import Address from "../components/login-sign/MyAccount/Address";
 import AccountDetails from "../components/login-sign/MyAccount/AccountDetail";
-import Book from "../components/pages/Book";
 
 const Pages = () => {
   return (
@@ -32,7 +30,6 @@ const Pages = () => {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/shop" element={<Shop />} />
-            <Route path="/book" element={<Book />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
             <Route path="/BookView/:id" element={<BookView />} />
